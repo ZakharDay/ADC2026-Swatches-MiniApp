@@ -12,26 +12,32 @@ body {
   font-weight: 400;
 }
 
-.images {
+.fills {
   display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
 
-  * {
-    width: 24px;
-    height: 24px;
-    margin: 0 10px;
-  }
+.fillCard {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  background-color: white;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+}
 
-  .image {
-    &#bgPNG {
-      background-image: url('../images/image.png');
-    }
+.fillColor {
+  width: 200px;
+  height: 50px;
+}
 
-    &#bgJPG {
-      background-image: url('../images/image.jpg');
-    }
+.fillCardInfo {
+  background-color: white;
+  padding: 10px;
+}
 
-    &#bgSVG {
-      background-image: url('../images/image.svg');
-    }
-  }
+.fillName {
+  color: grey;
 }
