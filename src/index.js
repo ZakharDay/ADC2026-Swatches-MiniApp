@@ -1,16 +1,17 @@
 import './index.css'
 
-document.addEventListener('DOMContentLoaded', () => {
+function fetchAndShowColors() {
   const root = document.getElementById('root')
+  const { url } = root.dataset
 
-  fetch('http://localhost:3000/api/v1/welcome/index.json')
+  root.innerHTML = ''
+
+  fetch(url)
     .then((response) => response.json())
     .then((data) => {
       console.log(data)
 
       data.forEach((color) => {
-        console.log(color)
-
         const fillCard = document.createElement('div')
         fillCard.classList.add('fillCard')
 
@@ -27,4 +28,14 @@ document.addEventListener('DOMContentLoaded', () => {
         root.appendChild(fillCard)
       })
     })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const bodyClass = document.body.classList[0]
+
+  if (bodyClass == 'index' || bodyClass == 'colors') {
+    console.log('TRUE')
+
+    fetchAndShowColors()
+  }
 })

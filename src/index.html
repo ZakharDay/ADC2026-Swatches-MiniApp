@@ -1,12 +1,24 @@
 <!doctype html>
-<html lang="en" dir="ltr">
+<html lang="ru" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <title>static-site-boilerplate index</title>
+    <title>Index</title>
     <analytics></analytics>
   </head>
 
   <body class="index">
-    <div class="fills" id="root"></div>
+    <menubar></menubar>
+    <h1>Проект Swatches</h1>
+    <p>Описание проекта средней длинны</p>
+
+    <h2>Популярные цвета</h2>
+    <div
+      class="fills"
+      id="root"
+      data-url="http://localhost:3000/api/v1/welcome/index.json"
+    >
+      Здесь будут популярные цвета
+    </div>
+    <a href="colors.html">Все цвета</a>
   </body>
 </html>

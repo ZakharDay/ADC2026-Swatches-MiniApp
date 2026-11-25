@@ -65,20 +65,45 @@ module.exports = {
       chunks: ['index']
     }),
 
-    // Internal pages
     new HtmlWebpackPlugin({
       hash: true,
       scriptLoading: 'blocking',
-      template: './src/pages/page.html',
-      filename: './pages/page.html',
-      chunks: ['page']
+      template: './src/about.html',
+      filename: './about.html',
+      chunks: ['index']
     }),
+
+    new HtmlWebpackPlugin({
+      hash: true,
+      scriptLoading: 'blocking',
+      template: './src/colors.html',
+      filename: './colors.html',
+      chunks: ['index']
+    }),
+
+    // Internal pages
+    // new HtmlWebpackPlugin({
+    //   hash: true,
+    //   scriptLoading: 'blocking',
+    //   template: './src/pages/page.html',
+    //   filename: './pages/page.html',
+    //   chunks: ['page']
+    // }),
 
     // Partials
     new HtmlWebpackPartialsPlugin([
       {
         path: path.join(__dirname, './src/partials/analytics.html'),
         location: 'analytics',
+        template_filename: '*',
+        priority: 'replace'
+      }
+    ]),
+
+    new HtmlWebpackPartialsPlugin([
+      {
+        path: path.join(__dirname, './src/partials/menubar.html'),
+        location: 'menubar',
         template_filename: '*',
         priority: 'replace'
       }

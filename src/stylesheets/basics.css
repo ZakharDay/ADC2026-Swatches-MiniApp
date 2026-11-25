@@ -8,8 +8,21 @@ body {
 }
 
 body {
+  padding-top: 60px;
   font-family: 'PT Root UI', Helvetica, Arial, sans-serif;
   font-weight: 400;
+}
+
+.menubar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  padding: 0 40px;
 }
 
 .fills {
